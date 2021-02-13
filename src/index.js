@@ -1,6 +1,20 @@
-import React from 'react'
-import styles from './styles.module.css'
+import { useState, useEffect } from 'react'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+const useHash = () => {
+  const [hash, setHash] = useState('')
+
+  const getHash = () => {
+    setHash(window.location.hash.substr(1))
+  }
+
+  useEffect(() => {
+    window.addEventListener('hashchange', getHash)
+
+    return () => window.removeEventListener('hashchange', getHash)
+  }, [hash])
+
+  return [hash]
 }
+
+export { useHash }
+export default useHash
