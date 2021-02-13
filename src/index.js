@@ -8,6 +8,7 @@ const useHash = () => {
   }
 
   useEffect(() => {
+    getHash()
     window.addEventListener('hashchange', getHash)
 
     return () => window.removeEventListener('hashchange', getHash)
