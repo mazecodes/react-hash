@@ -7,18 +7,17 @@ const useHash = () => {
     setHash(window.location.hash.substr(1))
   }
 
-  const changeHash = (value) => {
-    setHash(value)
-    window.location.hash = value
-  }
-
   useEffect(() => {
     window.addEventListener('hashchange', getHash)
 
     return () => window.removeEventListener('hashchange', getHash)
+  }, [])
+
+  useEffect(() => {
+    window.location.hash = hash
   }, [hash])
 
-  return [hash, changeHash]
+  return [hash, setHash]
 }
 
 export { useHash }
