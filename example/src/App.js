@@ -1,10 +1,15 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-hash'
-import 'react-hash/dist/index.css'
+import { useHash } from 'react-hash'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [hash] = useHash()
+
+  return (
+    <div className='App'>
+      <h1>{hash}</h1>
+    </div>
+  )
 }
 
 export default App
