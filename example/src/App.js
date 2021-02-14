@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { useHash } from 'react-hash'
+import { useHash } from 'react-hash';
 
 const App = () => {
-  const [hash, setHash] = useHash()
+  const [hash, setHash] = useHash();
 
   return (
     <div className='App'>
@@ -14,7 +14,7 @@ const App = () => {
         onChange={(e) => setHash(e.target.value)}
       />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

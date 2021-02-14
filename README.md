@@ -13,14 +13,14 @@ npm install --save react-hash
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import MyComponent from 'react-hash'
-import 'react-hash/dist/index.css'
+import MyComponent from 'react-hash';
+import 'react-hash/dist/index.css';
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```
