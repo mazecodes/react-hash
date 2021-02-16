@@ -11,3 +11,17 @@
 - [Author](#author)
 - [Support](#show-your-support)
 - [License](#license)
+
+## Install
+
+npm:
+
+```bash
+npm install react-hash
+```
+
+Yarn:
+
+```bash
+yarn add react-hash
+```
